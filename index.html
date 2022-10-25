@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>제 2회 강원도 사이버 보안 해킹방어대회</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#"><li>2th GCHD</li></a>
+                <a href="#"><li>참가신청</li></a>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <div id="banner">
+            <div class="banner_text">
+                <h2>제 2회<br>강원도 사이버 보안<br>해킹방어대회</h2>
+                <span>2th Gangwon-do Cybersecurity Conflict Exercise</span>
+                <a href="#">참가신청</a>
+            </div>
+        </div>
+    </article>
+    <section class="intro__G">
+        <div id="section_size">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Urna, ipsum nec, laoreet ac duis nec commodo.</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Hendrerit fermentum sollicitudin suspendisse vestibulum.<br>
+                Mauris nisl duis non maecenas eu.</span>
+        </div>
+    </section>
+    <section class="contest__info">
+       <div class="contest_info_size">
+            <div class="info__top">
+                <div class="target info_box">
+                    <h3>참가대상</h3>
+                    <hr>
+                    <p>강원 도내<br>
+                        대학 소재 대학생,<br>
+                        대학원생, 군인, 군무원</p>
+                </div>
+                <div class="schdule info_box">
+                    <h3>대회일정</h3>
+                    <hr>
+                    <span>사전교육(예선)</span>
+                    <p>2022년 11월 6일(일요일)</p>
+                    <span>본선</span>
+                    <p>2022년 11월 26일(일요일)</p>
+                </div>
+                <div class="place info_box">
+                    <h3>대회장소</h3>
+                    <hr>
+                    <p>강원도 춘천시 스포츠타운길 376<br>
+                        오라호텔베어스 소양홀</p>
+                </div>
+                <div class="prize info_box">
+                    <h3>시상내역</h3>
+                    <hr>
+                    <p class="prize__1">강원도지사 상</p>
+                    <p class="prize__2">한국인터넷진흥원장 상</p>
+                    <p class="prize__3">강원테크노파크원장 상</p>
+                </div>
+            </div>
+            <div class="info__bottom">
+                <div class="app info_box">
+                    <h3>대회장소</h3>
+                    <hr>
+                    <p>2022년 00월 00일 ~ 00월 00일</p>
+                    <span>www. gchd.or.kr</span>
+                </div>
+                <div class="qus info_box">
+                    <h3>대회문의</h3>
+                    <hr>
+                    <p>admin@hchd.or.kr</p>
+                </div>
+            </div>
+       </div>
+    </section>
+    <footer>
+        <div class="footer_size">
+            <div class="footer_content">
+                <h3>2th GHD CONTEST</h3>
+                <P>제 2회 강원도 사이버 보안 해킹 방어대회<br>
+                2th Gangwon-do Cybersecurity Conflict Exercise</P>
+            </div>
+            <img src="img/Gangwon.png" alt="">
+        </div>
+    </footer>
+
+<!-- header event -->
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.querySelector("header");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+</body>
+</html>

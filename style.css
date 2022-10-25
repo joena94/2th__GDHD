@@ -1,0 +1,515 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
+	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* 메뉴 */
+header{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+}
+header.sticky{
+    position: fixed;
+    top: 0;
+    background: linear-gradient(60deg, #014898, #019C7C);
+    animation: dropHeader 0.3s;
+    z-index: 999;
+}
+@keyframes dropHeader {
+    0% {
+        top:-50px;
+    }
+    100%{
+        top:0;
+    }
+}
+header nav{
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+header nav ul{
+    list-style: none;
+    font-family: 'Gmarket Sans';
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul a{
+    text-decoration: none;
+    color: white;
+}
+header nav ul a:first-child{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 9px;
+}
+header nav ul a:last-child{
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    padding: 7px 0;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+/* menu reponsive  */
+@media screen and (min-width:768px) and (max-width:1260px){
+    header nav{
+        width: 768px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    header nav{
+        width: 280px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+
+/* article */
+article{
+    width: 100%;
+    height: 500px;
+    background-image: url(img/main_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Gmarket Sans';
+}
+article #banner{
+    display: flex;
+    align-items: center;
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+article #banner .banner_text{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+article #banner .banner_text h2{
+    font-size: 58px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+article #banner .banner_text span{
+    font-size: 20px;
+    color: white;
+}
+article #banner .banner_text a{
+    color: black;
+    text-decoration: none;
+    width: 95px;
+    height: 35px;
+    background-color: white;
+    text-align: center;
+    padding: 9px 0;
+    margin-top: 20px;
+}
+@media screen and (min-width:768px) and (max-width:1260px){
+    article{
+        width: 100%;
+        height: 500px;
+        background-image: url(img/main_banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: 'Gmarket Sans';
+    }
+    article #banner{
+        display: flex;
+        align-items: center;
+        width: 768px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 8px 0;
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    article{
+        background-position: left;
+    }
+    article #banner{
+        display: flex;
+        align-items: center;
+        width: 280px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 8px 0;
+    }
+    article #banner .banner_text h2{
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 8px;
+    }
+    article #banner .banner_text span{
+        font-size: 1rem;
+        color: white;
+        line-height: 1.5rem;
+    }
+}
+
+/* section */
+.intro__G{
+    width: 100%;
+    height: 240px;
+    font-family: 'Gmarket Sans';
+    margin-bottom: 70px;
+}
+.intro__G #section_size{
+    display: flex;
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro__G #section_size h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.intro__G #section_size span{
+    font-size: 16px;
+    text-align: right;
+    line-height: 20px;
+}
+@media screen and (min-width:768px) and (max-width:1260px){
+    .intro__G #section_size{
+        display: flex;
+        width: 768px;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    .intro__G #section_size{
+        display: flex;
+        width: 280px;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .intro__G #section_size h3{
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .intro__G #section_size span{
+        font-size: 0.7rem;
+        text-align: right;
+        line-height: 1rem;
+    }
+}
+/* 대회정보 #contest_info */
+.contest__info{
+    width: 100%;
+    font-family: 'Gmarket Sans';
+}
+.contest__info .contest_info_size{
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+}
+.contest__info .contest_info_size .info__top, .info__bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.contest__info .contest_info_size .info__top{
+    margin-bottom: 8rem;    
+}
+.contest__info .contest_info_size .info__top div{
+    width: 300px;
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+.contest__info .contest_info_size .info__top .target::before{
+    content: url("img/people.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__top .info_box h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.contest__info .contest_info_size .info__top .info_box hr{
+    width: 40px;
+    border: 1px solid black;
+    color: black;
+    margin: 20px auto;
+}
+.contest__info .contest_info_size .info__top .target p, .place p{
+    text-align: center;
+    line-height: 22px;
+}
+.contest__info .contest_info_size .info__top .schdule::before{
+    content: url("img/calendar.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__top .schdule{
+    text-align: center;
+    line-height: 30px;
+}
+.contest__info .contest_info_size .info__top .schdule span{
+    background: linear-gradient(60deg, #014898, #019C7C);
+    color: white;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+.contest__info .contest_info_size .info__top .place::before{
+    content: url("img/globelocation.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__top .prize::before{
+    content: url("img/prize.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__top .prize p{
+    line-height: 30px;
+    margin-left: 30px;
+}
+.contest__info .contest_info_size .info__top .prize .prize__1::before{
+    content: "1등(금상)";
+    background: linear-gradient(60deg, #014898, #019C7C);
+    color: white;
+    padding: 3px 7px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__top .prize .prize__2::before{
+    content: "2등(은상)";
+    background: linear-gradient(60deg, #014898, #019C7C);
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__top .prize .prize__3::before{
+    content: "3등(동상)";
+    background: linear-gradient(60deg, #014898, #019C7C);
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+@media screen and (min-width:768px) and (max-width:1260px){
+    .contest__info .contest_info_size{
+        width: 768px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .contest__info .contest_info_size .info__top, .info__bottom{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+    .contest__info .contest_info_size .info__top .info_box{
+        margin-bottom: 6rem;
+    }
+    .contest__info .contest_info_size .info__top{
+        margin-bottom: 1rem;    
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    .contest__info .contest_info_size{
+        width: 280px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .contest__info .contest_info_size .info__top, .info__bottom{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+    .contest__info .contest_info_size .info__top .info_box{
+        margin-bottom: 6rem;
+    }
+    .contest__info .contest_info_size .info__top{
+        margin-bottom: 1rem;    
+    }
+}
+
+/* 대회정보 #contest_info */
+.contest__info .contest_info_size .info__bottom div{
+    width: 619px;
+    height: 258px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+.contest__info .contest_info_size .info__bottom .app::before{
+    content: url("img/computer.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__bottom .info_box h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.contest__info .contest_info_size .info__bottom .info_box hr{
+    width: 40px;
+    border: 1px solid black;
+    color: black;
+    margin: 20px auto;
+}
+.contest__info .contest_info_size .info__bottom .app{
+    text-align: center;
+    line-height: 30px;
+}
+.contest__info .contest_info_size .info__bottom .app p{
+    line-height: 22px;
+}
+.contest__info .contest_info_size .info__bottom .app span{
+    background: linear-gradient(60deg, #014898, #019C7C);
+    color: white;
+    padding: 4px 10px;
+    font-size: 14px;
+    margin-top: 2;
+}
+.contest__info .contest_info_size .info__bottom .qus::before{
+    content: url("img/question.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__bottom .info_box h3{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.contest__info .contest_info_size .info__bottom .info_box hr{
+    width: 40px;
+    border: 1px solid black;
+    color: black;
+    margin: 20px auto;
+}
+.contest__info .contest_info_size .info__bottom .qus p{
+    text-align: center;
+    line-height: 22px;
+}
+
+@media screen and (min-width:768px) and (max-width:1260px){
+    .contest__info .contest_info_size .info__bottom div{
+        width: 619px;
+        height: 258px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 7rem;
+    }
+    .contest__info .contest_info_size .info__bottom div:last-child{
+        margin-bottom: 0rem;
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    .contest__info .contest_info_size .info__bottom div{
+        margin-bottom: 7rem;
+    }
+    .contest__info .contest_info_size .info__bottom div:last-child{
+        margin-bottom: 0rem;
+    }
+}
+
+/* footer 시작 */
+footer{
+    background: linear-gradient(60deg, #014898, #019C7C);
+    margin-top: 6rem;
+}
+footer .footer_size{
+    width: 1260px;
+    margin: 0 auto;
+    color: white;
+    padding: 2rem 0;
+    font-family: 'Gmarket Sans';
+    text-align: right;
+    line-height: 1.5rem;
+}
+footer .footer_size .footer_content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+footer .footer_size .footer_content h3{
+    font-size: 1.5rem;
+}
+@media screen and (min-width:768px) and (max-width:1260px){
+    footer .footer_size{
+        width: 768px;
+
+    }
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    footer .footer_size{
+        width: 280px;
+    }
+    footer .footer_size .footer_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        word-break: keep-all;
+    }
+    footer .footer_size .footer_content h3{
+        margin-bottom: 1rem;
+    }
+    footer .footer_size img{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
