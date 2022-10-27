@@ -18,6 +18,12 @@
 	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 	url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 /* 메뉴 */
 header{
@@ -28,7 +34,8 @@ header{
 header.sticky{
     position: fixed;
     top: 0;
-    background: linear-gradient(60deg, #014898, #019C7C);
+    background: rgb(0,0,0);
+    background: rgba(41,43,128,1);
     animation: dropHeader 0.3s;
     z-index: 999;
 }
@@ -93,10 +100,8 @@ header nav ul a:last-child{
 article{
     width: 100%;
     height: 500px;
-    background-image: url(img/main_banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(41,43,128,1) 100%);
     font-family: 'Gmarket Sans';
 }
 article #banner{
@@ -106,6 +111,7 @@ article #banner{
     height: 100%;
     margin: 0 auto;
     padding: 8px 0;
+    justify-content: space-between;
 }
 article #banner .banner_text{
     margin-top: 20px;
@@ -132,14 +138,15 @@ article #banner .banner_text a{
     padding: 9px 0;
     margin-top: 20px;
 }
+article #banner .banner_img{
+    max-width: 100%;
+}
 @media screen and (min-width:768px) and (max-width:1260px){
     article{
         width: 100%;
         height: 500px;
-        background-image: url(img/main_banner.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(41,43,128,1) 100%);
         font-family: 'Gmarket Sans';
     }
     article #banner{
@@ -149,6 +156,20 @@ article #banner .banner_text a{
         height: 100%;
         margin: 0 auto;
         padding: 8px 0;
+    }
+    article #banner .banner_img img{
+        max-width: 100%;
+    }
+    article #banner .banner_text h2{
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 8px;
+    }
+    article #banner .banner_text span{
+        font-size: 1rem;
+        color: white;
+        line-height: 1.5rem;
     }
 }
 @media screen and (min-width:280px) and (max-width:767px){
@@ -174,67 +195,16 @@ article #banner .banner_text a{
         color: white;
         line-height: 1.5rem;
     }
+    article #banner .banner_img{
+        display: none;
+    }
 }
 
-/* section */
-.intro__G{
-    width: 100%;
-    height: 240px;
-    font-family: 'Gmarket Sans';
-    margin-bottom: 70px;
-}
-.intro__G #section_size{
-    display: flex;
-    width: 1260px;
-    height: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-}
-.intro__G #section_size h3{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-}
-.intro__G #section_size span{
-    font-size: 16px;
-    text-align: right;
-    line-height: 20px;
-}
-@media screen and (min-width:768px) and (max-width:1260px){
-    .intro__G #section_size{
-        display: flex;
-        width: 768px;
-        height: 100%;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-@media screen and (min-width:280px) and (max-width:767px){
-    .intro__G #section_size{
-        display: flex;
-        width: 280px;
-        height: 100%;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .intro__G #section_size h3{
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 28px;
-    }
-    .intro__G #section_size span{
-        font-size: 0.7rem;
-        text-align: right;
-        line-height: 1rem;
-    }
-}
 /* 대회정보 #contest_info */
 .contest__info{
     width: 100%;
     font-family: 'Gmarket Sans';
+    margin-top: 10rem;
 }
 .contest__info .contest_info_size{
     width: 1260px;
@@ -277,6 +247,32 @@ article #banner .banner_text a{
     text-align: center;
     line-height: 22px;
 }
+.contest__info .contest_info_size .info__top .app::before{
+    content: url("img/computer.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__top .app{
+    text-align: center;
+    line-height: 30px;
+}
+.contest__info .contest_info_size .info__top .app p{
+    line-height: 22px;
+}
+.contest__info .contest_info_size .info__top .app a{
+    display: inline-block;
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 2px 15px;
+    font-size: 16px;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+
 .contest__info .contest_info_size .info__top .schdule::before{
     content: url("img/calendar.png");
     height: 175px;
@@ -290,7 +286,7 @@ article #banner .banner_text a{
     line-height: 30px;
 }
 .contest__info .contest_info_size .info__top .schdule span{
-    background: linear-gradient(60deg, #014898, #019C7C);
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
     color: white;
     padding: 4px 10px;
     font-size: 14px;
@@ -303,45 +299,7 @@ article #banner .banner_text a{
     margin-top: -90px;
     transform: scale(0.7);
 }
-.contest__info .contest_info_size .info__top .prize::before{
-    content: url("img/prize.png");
-    height: 175px;
-    display: flex;
-    justify-content: center;
-    margin-top: -90px;
-    transform: scale(0.7);
-}
-.contest__info .contest_info_size .info__top .prize p{
-    line-height: 30px;
-    margin-left: 30px;
-}
-.contest__info .contest_info_size .info__top .prize .prize__1::before{
-    content: "1등(금상)";
-    background: linear-gradient(60deg, #014898, #019C7C);
-    color: white;
-    padding: 3px 7px;
-    text-align: center;
-    font-size: 14px;
-    margin-right: 8px;
-}
-.contest__info .contest_info_size .info__top .prize .prize__2::before{
-    content: "2등(은상)";
-    background: linear-gradient(60deg, #014898, #019C7C);
-    color: white;
-    padding: 3px 5px;
-    text-align: center;
-    font-size: 14px;
-    margin-right: 8px;
-}
-.contest__info .contest_info_size .info__top .prize .prize__3::before{
-    content: "3등(동상)";
-    background: linear-gradient(60deg, #014898, #019C7C);
-    color: white;
-    padding: 3px 5px;
-    text-align: center;
-    font-size: 14px;
-    margin-right: 8px;
-}
+
 @media screen and (min-width:768px) and (max-width:1260px){
     .contest__info .contest_info_size{
         width: 768px;
@@ -381,19 +339,18 @@ article #banner .banner_text a{
 
 /* 대회정보 #contest_info */
 .contest__info .contest_info_size .info__bottom div{
-    width: 619px;
-    height: 258px;
+    width: 300px;
+    height: 280px;
     border-radius: 10px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-.contest__info .contest_info_size .info__bottom .app::before{
-    content: url("img/computer.png");
-    height: 175px;
-    display: flex;
-    justify-content: center;
-    margin-top: -90px;
-    transform: scale(0.7);
+.contest__info .contest_info_size .info__bottom div:last-child{
+    width: 619px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
+
 .contest__info .contest_info_size .info__bottom .info_box h3{
     text-align: center;
     font-size: 32px;
@@ -405,19 +362,74 @@ article #banner .banner_text a{
     color: black;
     margin: 20px auto;
 }
-.contest__info .contest_info_size .info__bottom .app{
-    text-align: center;
+.contest__info .contest_info_size .info__bottom .prize_general::before{
+    content: url("img/prize.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.7);
+}
+.contest__info .contest_info_size .info__bottom .prize_general p{
     line-height: 30px;
+    margin-left: 30px;
 }
-.contest__info .contest_info_size .info__bottom .app p{
-    line-height: 22px;
-}
-.contest__info .contest_info_size .info__bottom .app span{
-    background: linear-gradient(60deg, #014898, #019C7C);
+.contest__info .contest_info_size .info__bottom .prize_general .prize__1::before{
+    content: "1위금상)";
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
     color: white;
-    padding: 4px 10px;
+    padding: 3px 7px;
+    text-align: center;
     font-size: 14px;
-    margin-top: 2;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__bottom .prize_general .prize__2::before{
+    content: "2위(은상)";
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__bottom .prize_general .prize__3::before{
+    content: "3위(동상)";
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__bottom .prize_army::before{
+    content: url("img/trophy.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.6);
+}
+.contest__info .contest_info_size .info__bottom .prize_army p{
+    line-height: 30px;
+    margin-left: 30px;
+}
+.contest__info .contest_info_size .info__bottom .prize_army .prize__4::before{
+    content: "1위(최우수상)";
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 3px 7px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.contest__info .contest_info_size .info__bottom .prize_army .prize__5::before{
+    content: "2위(우수상)";
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 8px;
 }
 .contest__info .contest_info_size .info__bottom .qus::before{
     content: url("img/question.png");
@@ -445,13 +457,14 @@ article #banner .banner_text a{
 
 @media screen and (min-width:768px) and (max-width:1260px){
     .contest__info .contest_info_size .info__bottom div{
+
+        margin-bottom: 7rem;
+    }
+    .contest__info .contest_info_size .info__bottom div:last-child{
         width: 619px;
         height: 258px;
         border-radius: 10px;
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
-        margin-bottom: 7rem;
-    }
-    .contest__info .contest_info_size .info__bottom div:last-child{
         margin-bottom: 0rem;
     }
 }
@@ -466,8 +479,10 @@ article #banner .banner_text a{
 
 /* footer 시작 */
 footer{
-    background: linear-gradient(60deg, #014898, #019C7C);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
     margin-top: 6rem;
+    
 }
 footer .footer_size{
     width: 1260px;
@@ -485,6 +500,10 @@ footer .footer_size .footer_content{
 }
 footer .footer_size .footer_content h3{
     font-size: 1.5rem;
+}
+footer .footer_size img{
+    width: 700px;
+    max-width: 100%;
 }
 @media screen and (min-width:768px) and (max-width:1260px){
     footer .footer_size{
@@ -509,7 +528,6 @@ footer .footer_size .footer_content h3{
     }
     footer .footer_size img{
         display: block;
-        width: 50%;
         margin: 0 auto;
     }
 }
