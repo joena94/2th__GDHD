@@ -344,13 +344,6 @@ article #banner .banner_img{
     border-radius: 10px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-.contest__info .contest_info_size .info__bottom div:last-child{
-    width: 619px;
-    height: 280px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
-}
-
 .contest__info .contest_info_size .info__bottom .info_box h3{
     text-align: center;
     font-size: 32px;
@@ -430,6 +423,27 @@ article #banner .banner_img{
     text-align: center;
     font-size: 14px;
     margin-right: 8px;
+}
+.contest__info .contest_info_size .info__bottom .pre::before{
+    content: url("img/Megaphone.png");
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    transform: scale(0.8);
+}
+.contest__info .contest_info_size .info__bottom .pre p{
+    text-align: center;
+    line-height: 22px;
+}
+.contest__info .contest_info_size .info__bottom .pre a{
+    display: inline-block;
+    background: linear-gradient(60deg, rgba(41,43,128,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    padding: 2px 15px;
+    font-size: 16px;
+    margin-top: 0.5rem;
+    text-decoration: none;
 }
 .contest__info .contest_info_size .info__bottom .qus::before{
     content: url("img/question.png");
